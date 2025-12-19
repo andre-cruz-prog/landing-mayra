@@ -1,0 +1,171 @@
+/* BASE */
+:root{
+  --accent:#2a9d8f;
+  --accent-2:#145d6b;
+  --bg:#f7f8fb;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --dark:#0f172a;
+  --radius:14px;
+  --container:1100px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--dark);margin:0;line-height:1.45}
+.container{max-width:var(--container);margin:0 auto;padding:0 20px}
+
+/* NAV */
+header.site{
+  background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.8));
+  backdrop-filter: blur(6px);
+  position:sticky;top:0;z-index:40;
+  box-shadow:0 6px 18px rgba(15,23,42,0.06)
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{font-weight:700;color:var(--accent);text-decoration:none;font-size:18px}
+nav.menu a{margin-left:18px;text-decoration:none;color:var(--dark);font-weight:600}
+.cta-ghost{padding:8px 14px;border-radius:10px;border:1px solid rgba(15,23,42,0.06);background:transparent}
+.cta{background:var(--accent);color:#fff;padding:10px 16px;border-radius:12px;text-decoration:none;font-weight:700}
+
+/* HERO */
+.hero{padding:56px 0 40px}
+.hero-inner{display:flex;gap:36px;align-items:center}
+.hero-left{flex:1}
+.headline{font-size:clamp(26px,4.4vw,42px);margin:0 0 12px;line-height:1.05}
+.slogan{color:var(--accent-2);font-weight:700;margin-bottom:12px}
+.lead{color:var(--muted);font-size:18px;margin-bottom:18px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.pill{display:inline-block;background:var(--card);padding:8px 12px;border-radius:999px;border:1px solid rgba(15,23,42,0.04);font-weight:600}
+
+.hero-right{width:360px;flex:0 0 360px}
+.photo-card{background:linear-gradient(180deg, rgba(255,255,255,1), rgba(250,250,250,1));padding:6px;border-radius:18px;box-shadow:0 12px 40px rgba(15,23,42,0.12);}
+.photo-card img{width:100%;height:420px;object-fit:cover;border-radius:12px;display:block}
+
+/* SECTIONS */
+section{padding:48px 0}
+.section-title{font-size:22px;margin-bottom:10px}
+.about-grid{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
+.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,0.06)}
+
+/* PLANS */
+.plans{display:flex;gap:18px;margin-top:14px}
+.plan{flex:1;padding:18px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfdfe);border:1px solid rgba(15,23,42,0.04)}
+.price{font-weight:800;color:var(--accent);font-size:20px;margin-top:8px}
+
+/* ===== DEPOIMENTOS ===== */
+.testimonials{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+  margin-top:22px;
+}
+.testimonial-item img{
+  width:100%;
+  max-width:420px;
+  border-radius:12px;
+  box-shadow:0 8px 22px rgba(0,0,0,0.08);
+}
+
+/* MOBILE DEPOIMENTOS */
+@media(max-width:780px){
+  .testimonials{
+    grid-template-columns:1fr!important;
+  }
+  .testimonial-item img{
+    max-width:330px!important;
+  }
+}
+
+/* CONTATO */
+.contact-grid{display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start}
+
+/* ========== BOTÃO WHATS FIXO ========== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  width: 60px;
+  height: 60px;
+  z-index: 999;
+}
+.whatsapp-float img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  cursor: pointer;
+}
+/* ========== MENU MOBILE ========== */
+
+.mobile-btn{
+  display:none;
+  font-size:26px;
+  background:none;
+  border:0;
+  cursor:pointer;
+  margin-left:8px;
+}
+
+.mobile-menu{
+  display:none;
+  flex-direction:column;
+  gap:14px;
+  padding:14px 18px;
+  background:#ffffff;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(15,23,42,0.12);
+  margin:0 20px 10px;
+}
+
+.mobile-menu a{
+  text-decoration:none;
+  font-weight:600;
+  color:#0f172a;
+}
+
+/* ABERTO */
+.mobile-menu.open{
+  display:flex;
+}
+
+/* APENAS NO CELULAR */
+@media(max-width:980px){
+  nav.menu{display:none;}      /* esconde menu desktop */
+  .mobile-btn{display:block;}  /* mostra botão ☰ */
+}
+/* FORM STYLE */
+form input, form textarea{
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #e6e9ef;
+  margin-bottom:10px;
+  font-size:15px;
+}
+
+form button{
+  background:var(--accent);
+  color:#fff;
+  padding:12px 16px;
+  border-radius:10px;
+  border:0;
+  font-weight:700;
+  cursor:pointer;
+}
+
+form button:hover{
+  background:var(--accent-2);
+}
+.whatsapp-float img:hover {
+  transform: scale(1.07);
+}
+.fade-1 { opacity:0; animation:fadeUp 0.7s ease forwards; }
+.fade-2 { opacity:0; animation:fadeUp 0.8s ease forwards; }
+.fade-3 { opacity:0; animation:fadeUp 0.9s ease forwards; }
+.fade-4 { opacity:0; animation:fadeUp 1s ease forwards; }
+
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(15px); }
+  to { opacity:1; transform:translateY(0); }
+}
