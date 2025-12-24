@@ -16,14 +16,14 @@ Em breve
 
 ## 📁 Estrutura de pastas
 assets/
-├── imagens
+imagens/
 depoimentos/
-index.html
-style.css
-script.js
+index.html/
+style.css/
+script.js.
 
 ## 📌 Status do projeto
-✅ Finalizado`
+✅ Finalizado
 
 ## 🔗 Acesse o projeto
 https://andre-cruz-prog.github.io/landing-mayra/
