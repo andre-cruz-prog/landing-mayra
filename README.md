@@ -23,7 +23,11 @@ style.css
 script.js
 
 ## 📌 Status do projeto
-✅ Finalizado
+✅ Finalizado`
+
+## 🔗 Acesse o projeto
+https://andre-cruz-prog.github.io/landing-mayra/
+
 
 ## 👨‍💻 Desenvolvido por
 **André Cruz**  
