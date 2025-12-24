@@ -15,11 +15,11 @@ Landing page desenvolvida para divulgação de aulas de inglês online, com foco
 Em breve
 
 ## 📁 Estrutura de pastas
-assets/
-imagens/
-depoimentos/
-index.html/
-style.css/
+assets /
+imagens /
+depoimentos /
+index.html /
+style.css /
 script.js.
 
 ## 📌 Status do projeto
